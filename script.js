@@ -30,3 +30,15 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const header = document.querySelector('.header');
+const allSections = document.querySelectorAll('.section');
+console.log(allSections)
+
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+message.innerHTML = 'We use cookies for improved user experience. <button class="btn btn--close-cookie">Got it!</button>';
+header.append(message);
+
+document.querySelector('.btn--close-cookie').addEventListener('click',function (){
+  message.remove();
+})
